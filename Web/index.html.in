@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<link rel="stylesheet" href="http://www.omegahat.org/OmegaTech.css">
+<meta name="description" content="R package to generate dynamic bindings to native code and data types"/>
+<meta name="keywords" content="R, RGCCTranslationUnit libffi, dynamic, invocation, compiled"/>
+<title>RGCCTUFFI: programmatic generation of dynamic interfaces to C
+routines and native data structures</title>
+</head>
+
+<body>
+<h1>The RGCCTUFFI package</h1>
+<p align=right>Last Release:
+ <a href="@TAR_FILE@"> @VERSION@</a> (<font color="red">@DATE@</font>)
+
+
+<p>
+This package provides a means of
+<ul>
+  <li> programmatically reading C code to obtain a description
+    of its routines and data structures, and
+  <li> programmatically generating interfaces to the routines and the
+      data structures,
+  <li> dynamically invoking any of those routines, accessing global variables,
+      and querying the fields of data structures without having to
+      compile
+      any additional code.
+</ul>
+
+The package is a thin layer on top of the
+<a href="../RGCCTranslationUnit">RGCCTranslationUnit</a>
+package and the <a href="../Rffi">Rffi</a> package.
+
+<p>
+This is an alternative to explicitly writing C/C++ code
+to interface to existing C/C++ routines and then
+compiling and loading that compiled code in order to be able
+to invoke the original compiled routines.
+The package allows one to do this entirely within R code
+and within an R session rather than ahead of time.
+
+<p>
+The use of <a href="../RGCCTranslationUnit">RGCCTranslationUnit</a>
+requires that one create the .tu file for the C code before reading
+the descriptions of that code.
+In the future, we might use the clang libraries for processing
+
+
+<p>
+An entirely different approach is to use <a href="../Rllvm">Rllvm</a> to compile
+new native routines to interface to the actual existing routines.
+
+
+<h2>Documentation</h2>
+There are help pages for all of the functions and several non-trivial
+examples
+including a description of the implementation  of the <a href="../GeoIP">GeoIP</a> package
+in that package.
+
+<dl>
+  <dt>
+  <li> 
+  <dd>
+</dl>
+
+
+
+<hr>
+<address><a href="http://www.stat.ucdavis.edu/~duncan/">Duncan Temple Lang</a>
+<a href=mailto:duncan@wald.ucdavis.edu>&lt;duncan@wald.ucdavis.edu&gt;</a></address>
+<!-- hhmts start -->
+Last modified: Wed Jan 26 09:26:47 PST 2011
+<!-- hhmts end -->
+</body> </html>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<?xml-stylesheet type="text/xsl" href="/Users/duncan/Classes/StatComputing/XDynDocs/inst/XSL/OmegahatXSL/Todo.xsl" ?> 
+
+<!--<?xml-stylesheet type="text/xsl" href="file:///Users/duncan/Projects/org/omegahat/Docs/XSL/Todo.xsl" ?> -->
+<!-- <?xml-stylesheet type="text/xsl" href="http://www.omegahat.org/Todo.xsl" ?> -->
+
+<topics xmlns:r="http://www.r-project.org">
+
+<topic>
+<items>
+
+<item>
+Fix returnInputs to depend on the mutability of the parameters
+in the TU description of the routine.
+Now we leave it to default to TRUE so even if there are no mutable
+parameters, we will return them.
+</item>
+
+<item>
+When gccFFITypeName returns the name of an R variable
+that is supposed to hold the FFI type, make certain to create it.
+(Or else return the code to create it rather than the name)
+</item>
+
+<item>
+array types
+</item>
+
+<item>
+getFFITypeSize for a struct.
+</item>
+
+<item >
+variable number of arguments ...
+Documented in  Rffi.Rdb.
+<br/>
+GCCTranslationUnit doesn't seem to be convey this information.
+The chan of parameters ends at the last known one before ...!
+</item>
+
+<item status="finish">
+Deal with the union type.
+<br/>
+Basically the methods are there to compute the type
+of the field with the maximum size. Need to handle arrays.
+<br/>
+Also keep the elements and the types of the union around
+so we can access the individual elements within the union.
+</item>
+
+<item>
+Ability to dump all the code to a file(s) easily
+</item>
+
+<item>
+Ability to loop over all routines, data structures, enums, etc.
+and generate the code.
+</item>
+
+<item>
+enums
+Can generate the code using writeCode.
+</item>
+
+<item>
+unsigned  char mapping to R class as NA. Fixed.
+But can't return 'unsigned char'. Need to identify this 
+special type and fix.
+See GeoIPTag
+</item>
+
+
+<item>
+Allow createRFunc to specify the mutability of the parameters.
+</item>
+
+
+<item status="done">
+Use closures and set the CIF and the getNativeSymbolInfo()$address for the
+function
+<br/>
+Do for struct functions.
+</item>
+
+<item status="done">
+Allow the caller of createRFunc to use global
+CIFs and  create those. This will avoid creating and
+deleting them in each call.
+<br/>
+Need to do the struct code.
+</item>
+
+<item>
+Put finalizers on the CIFs.
+</item>
+
+<item status="done">
+Handle the case where the inputs are returned
+in the call to CIF but we want to convert the
+ans which is in $value and put it back there.
+</item>
+
+
+<item status="done">
+getting the name of the corresponding R  class from a PointerType
+whose name is NA.
+See GeoIPTag
+</item>
+
+
+<item status="done">
+Make conversion of an  RCReference access the ref slot.
+</item>
+</items>
+</topic>
+</topics>

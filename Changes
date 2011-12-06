@@ -1,0 +1,8 @@
+Version 0.2-0
+
+  * Creation of documentation
+
+  * More comprehensive testing
+
+  * Handling of pointer class names more consistently with the generated code
+    via the RGCCTranslationUnit package.

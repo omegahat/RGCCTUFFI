@@ -1,0 +1,19 @@
+export(createRFunc,
+       defStructClass,
+       define,
+       genCode,
+       genTUInterface,
+       toFile)
+
+exportMethods(toFile)
+
+
+export(genDocumentation)
+
+exportClasses(
+	RAbstractAutoDocumentation,
+	RAutoDocumentation,
+	RFunctionDocumentation,
+	REnumDocumentation,
+	RClassDocumentation,
+	RTUDocumentation)

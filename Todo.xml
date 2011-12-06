@@ -1,0 +1,44 @@
+<items>
+<item>
+</item>
+
+<item>
+Potential problem with duplicate enumeration variables if
+used in scope. Not problem in C.
+</item>
+<item>
+We pass R CMD check because we don't add a usage section in the documentation.
+</item>
+
+<item status="done">
+But we are also not adding entries for ..., cif and returnInputs.
+</item>
+
+<item status="done">
+charRef rather than stringType or stringArrayType.
+</item>
+
+<item>
+Use RCIndex (is this RClangSimple ?) or clang's C++ interface
+to use that to read the C code.
+</item>
+
+<item>
+Deal with unsigned char
+</item>
+
+<item>
+Deal with union in the name of a type.
+And unions generally
+</item>
+
+
+<item>
+Generate the NAMESPACE file
+</item>
+
+<item status="done">
+Generate documentation
+</item>
+
+</items>
